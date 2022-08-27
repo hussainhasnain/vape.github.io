@@ -1,0 +1,720 @@
+/* ==================== CSS File =================== */
+/* ==================== Media Queries =================== */
+/* ==================== Fonts =================== */
+/* ==================== Colors =================== */
+/* ==================== Center our content =================== */
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 75em) {
+  .row {
+    max-width: 100rem;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .row {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .row {
+    max-width: 55rem;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 24em) {
+  .row {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+}
+
+/* ==================== Basic Styling =================== */
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #2d2d2d;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #000;
+}
+
+.upper-text {
+  text-transform: uppercase;
+}
+
+.center-text {
+  text-align: center;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 47.35%;
+  }
+}
+
+@media only screen and (max-width: 24em) {
+  html {
+    font-size: 37.5%;
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #2d2d2d;
+  line-height: 1.6;
+  overflow: hidden;
+}
+
+/* ==================== Header Starts Here =================== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6rem;
+  height: 9.6rem;
+  z-index: 9999;
+}
+
+.logo {
+  font-size: 3.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 75em) {
+  .main-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(100%);
+    transition: all 0.5s;
+    z-index: 9999;
+  }
+}
+
+.main-nav__list {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+  transform: translateX(-40rem);
+}
+
+@media only screen and (max-width: 75em) {
+  .main-nav__list {
+    flex-direction: column;
+    transform: translateX(0);
+  }
+}
+
+.main-nav__link {
+  display: inline-block;
+  font-size: 1.8rem;
+  color: #000;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.main-nav__link:hover {
+  color: #68C3EB;
+}
+
+.main-nav__cta {
+  background-color: #000;
+  padding: 1.2rem 2rem;
+  color: #fff;
+  border-radius: 0.9rem;
+  transform: translateX(35rem);
+}
+
+@media only screen and (max-width: 75em) {
+  .main-nav__cta {
+    transform: translateX(0);
+  }
+}
+
+.main-nav__cta:hover {
+  background-color: #68C3EB;
+  color: #000;
+}
+
+@media only screen and (max-width: 75em) {
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  .nav-open .main-nav__link {
+    color: #fff;
+    font-size: 3rem;
+  }
+}
+
+.nav-open .icon-mobile-nav[name="close-outline"] {
+  display: block;
+}
+
+.nav-open .icon-mobile-nav[name="menu-outline"] {
+  display: none;
+}
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+@media only screen and (max-width: 75em) {
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+}
+
+.icon-mobile-nav {
+  font-size: 4rem;
+  cursor: pointer;
+  color: #68C3EB;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+/* ==================== Sticky Navigation =================== */
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(104, 195, 235, 0.97);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.3);
+}
+
+.sticky .hero {
+  margin-top: 9.6rem;
+}
+
+.sticky .main-nav__link {
+  color: #fff;
+}
+
+.sticky .main-nav__link:hover {
+  color: #FFC85B;
+}
+
+.sticky .logo {
+  color: #fff;
+}
+
+.sticky .main-nav__cta {
+  background-color: #FFC85B;
+  color: #fff;
+}
+
+.sticky .main-nav__cta:hover {
+  color: #68C3EB;
+}
+
+/* ==================== Header Ends Here =================== */
+/* ==================== Hero starts Here =================== */
+.hero {
+  padding: 10rem 0 10rem 0;
+}
+
+.hero__content {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .hero__content {
+    flex-direction: column;
+  }
+}
+
+.hero__textbox {
+  flex: 0 0 50%;
+  padding: 0 5vw 0 0;
+}
+
+.hero__textbox > *:not(:last-child) {
+  margin-bottom: 4rem;
+}
+
+.hero__textbox--text {
+  font-size: 1.4rem;
+}
+
+.hero__photo {
+  flex: 0 0 50%;
+}
+
+/* ==================== Heading starts Here =================== */
+.heading-primary {
+  font-size: 8rem;
+  color: #000;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.heading-secondary {
+  font-size: 5rem;
+  color: #000;
+}
+
+.heading-secondary__about {
+  transform: translateY(-5rem);
+}
+
+.heading-tertiary {
+  font-size: 4.5rem;
+  color: #000;
+  line-height: 1;
+  font-weight: 700;
+}
+
+/* ==================== Button starts Here =================== */
+.btn {
+  display: inline-block;
+}
+
+.btn__primary {
+  padding: 1.2rem 2.4rem;
+  background-color: #68C3EB;
+  color: #fff;
+  border-radius: 0.9rem;
+  font-size: 1.4rem;
+  transition: all 0.3s;
+}
+
+.btn__primary:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn__secondary {
+  padding: 1.2rem 3.2rem;
+  background-color: #000;
+  color: #fff;
+  border-radius: 0.9rem;
+  font-size: 1.4rem;
+  transition: all 0.3s;
+}
+
+.btn__secondary:hover {
+  background-color: #68C3EB;
+  color: #000;
+}
+
+.btn__secondary--products {
+  transform: translateY(-10rem);
+}
+
+/* ==================== Hero Ends Here =================== */
+/* ==================== Section About starts Here =================== */
+.about {
+  padding: 10rem 0 10rem 0;
+}
+
+.about__content {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .about__content {
+    flex-direction: column;
+  }
+}
+
+.about__photo {
+  flex: 0 0 50%;
+  padding: 5vh 5vw 5vh 0;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .about__photo {
+    order: 1;
+  }
+}
+
+.about__photo--img {
+  border-radius: 1rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .about__photo--img {
+    max-width: 70%;
+  }
+}
+
+.about__textbox {
+  flex: 0 0 50%;
+}
+
+.about__textbox--text {
+  font-size: 1.4rem;
+  margin-bottom: 4rem;
+  background-color: #fff;
+  padding: 4vh 2vw 8vh 2vw;
+  border-radius: 1rem;
+  transform: translate(-20rem, 10rem);
+}
+
+@media only screen and (max-width: 56.25em) {
+  .about__textbox--text {
+    transform: translate(0);
+  }
+}
+
+/* ==================== Section About ends Here =================== */
+/* ==================== Section services starts Here =================== */
+.services {
+  padding: 10rem 0;
+}
+
+.services__content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media only screen and (max-width: 75em) {
+  .services__content {
+    flex-direction: column;
+  }
+}
+
+.services__left {
+  flex: 0 0 40%;
+}
+
+.services__left--text {
+  font-size: 1.4rem;
+  margin: 2rem 0 4rem 0;
+}
+
+.services__right {
+  flex: 0 0 50%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 1rem;
+}
+
+.services__right--item-desc {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.services__right--item-icon {
+  font-size: 2.8rem;
+  color: #68C3EB;
+}
+
+.services__right--item-name {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.services__right--item-text {
+  font-size: 1.2rem;
+}
+
+/* ==================== Section services ends Here =================== */
+/* ==================== Section Products starts Here =================== */
+.products {
+  padding: 5rem 0;
+}
+
+.products__text {
+  font-size: 1.4rem;
+  padding: 2vh 10vw;
+}
+
+.products__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+
+.products__content--item {
+  text-align: center;
+}
+
+.products__content--item-desc {
+  transform: translate(9rem, -15rem);
+  width: 15rem;
+  height: 10rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+}
+
+.products__content--item-name {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.products__content--item-price {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* ==================== Section Products ends Here =================== */
+/* ==================== Section Taste starts Here =================== */
+.taste {
+  padding: 10rem 0;
+  transform: translateY(-10rem);
+}
+
+.taste__content {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .taste__content {
+    flex-direction: column;
+  }
+}
+
+.taste__text {
+  flex: 0 0 50%;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .taste__text {
+    order: 1;
+  }
+}
+
+.taste__text > *:not(:last-child) {
+  margin-bottom: 4rem;
+}
+
+.taste__text--para {
+  font-size: 1.4rem;
+}
+
+.taste__photo {
+  flex: 0 0 50%;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .taste__photo--img {
+    max-width: 70%;
+  }
+}
+
+/* ==================== Section Taste Ends Here =================== */
+/* ==================== Section Testimonials starts Here =================== */
+.testimonials__content {
+  display: flex;
+  align-items: center;
+  padding: 10rem 0;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .testimonials__content {
+    flex-direction: column;
+  }
+}
+
+.testimonials__text {
+  flex: 0 0 50%;
+}
+
+.testimonials__text > *:not(:last-child) {
+  margin-bottom: 4rem;
+}
+
+.testimonials__text--para {
+  font-size: 1.6rem;
+  padding: 0 2vw 0 0;
+}
+
+.testimonials__text--icon-star {
+  font-size: 2rem;
+  color: #68C3EB;
+}
+
+.testimonials__photo {
+  flex: 0 0 50%;
+}
+
+.testimonials__photo--img {
+  border-radius: 3rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .testimonials__photo--img {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 56.25em) and (max-width: 56.25em) {
+  .testimonials__photo--img {
+    max-width: 70%;
+  }
+}
+
+/* ==================== Section Testimonials ends Here =================== */
+/* ==================== Section Form starts Here =================== */
+.form {
+  padding: 10rem 0 15rem 0;
+}
+
+.form__content {
+  background-color: #68C3EB;
+  padding: 8rem 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 2rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .form__content {
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+
+.form__content--input {
+  padding: 2rem 6rem;
+  border: none;
+  outline: none;
+  border-radius: 0.9rem;
+}
+
+.form__content--icon {
+  transform: translateX(-10rem);
+}
+
+.form__content--icon-arrow {
+  font-size: 6rem;
+  color: #fff;
+}
+
+.form__content--icon-arrow::before {
+  content: '';
+  width: 50rem;
+  height: 50rem;
+  border-radius: 50%;
+  background-color: green;
+  color: green;
+  top: 0;
+  left: 0;
+}
+
+/* ==================== Section Form ends Here =================== */
+/* ==================== Section Footer starts Here =================== */
+.footer {
+  padding: 5rem 0;
+  color: #B6B6B6;
+}
+
+.footer__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+}
+
+@media only screen and (max-width: 37.5em) {
+  .footer__content {
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  }
+}
+
+.footer__logo {
+  font-size: 3.2rem;
+  color: #000;
+  margin-bottom: 2rem;
+}
+
+.footer__text {
+  font-size: 1.4rem;
+}
+
+.footer__list > *:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+.footer__link {
+  font-size: 1.6rem;
+  color: #B6B6B6;
+  transition: all 0.3s;
+}
+
+.footer__link:hover {
+  color: #FFC85B;
+}
+
+.footer__link--main {
+  font-size: 2.6rem;
+  color: #000;
+}
+
+/* ==================== Section Footer Ends Here =================== */
+/*# sourceMappingURL=main.css.map */
